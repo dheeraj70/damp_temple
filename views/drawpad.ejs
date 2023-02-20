@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Drawing Comet</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+<link rel="stylesheet" href="drawpadcss/drawpad.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7ebdac75d5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+  <div id="popup">
+<form action="/draw" method="POST">
+  <input style="display:none;" type="text" id="datval" name="data">
+  <div class="popupchild">
+
+    <input style="height:8vh;width:80vw;margin-left:10vw;" type="text" id="drawerr" name="drawer" placeholder="Your Name">
+    <br>
+    <button style="background-color:#AAAAAA;margin-left:35vw;margin-top:10px;" type="submit" id="finalsubmit" name="button"><h4 style="font-family: 'Montserrat', sans-serif;">submit</h4></button>
+  </div>
+
+</form>
+  </div>
+  <div class="app">
+    <div id="controls" class="controls">
+      <input type="radio" id="pencil" name="drawtool" value="PENCIL">
+  <label for="pencil"><i class="fas fa-pencil-alt"></i></label>
+  <input type="radio" id="brush" name="drawtool" value="BRUSH" checked>
+<label for="brush"><i class="fas fa-paint-brush"></i></label>
+<label style="margin-left:4vw" for="favcolor">Colour:</label>
+<input type="color" id="favcolor" name="favcolor">
+<br>
+<label for="size">Brush size:</label>
+<input type="range" id="size"  class="slider" min="1" max="50" value="15">
+<button type="button" id="reset" name="reset"><h4 style="font-family: 'Montserrat', sans-serif;">reset</h4></button>
+<button type="button" id="submit" name="submit"><h4 style="font-family: 'Montserrat', sans-serif;">submit</h4></button>
+
+
+
+    </div>
+    <canvas></canvas>
+  </div>
+</div>
+  <script type="text/javascript" src="jss/draw.js"></script>
+
+  </body>
+
+  </html>

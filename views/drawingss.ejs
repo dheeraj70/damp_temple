@@ -1,0 +1,13 @@
+<%-include("top")-%>
+
+<h1 style="color:white;font-family: 'Montserrat', sans-serif;text-align:center;margin:10px auto 10px auto">Drawings</h1>
+<div class="imagwrap">
+  <% for(var i = 0;i<setno;i++){ %>
+
+      <img style="width:50vw;height:auto;" src="<%=set[i][1]%>" alt="img">
+<h3 style="font-family: 'Montserrat', sans-serif;text-align:center;">Artist name:<%=set[i][0]%></h3>
+<h3 style="font-family: 'Montserrat', sans-serif;text-align:center;">Likes:<%=set[i][2]%></h3>
+<hr>
+  <% } %>
+  </div>
+  <%-include("bottom")-%>
