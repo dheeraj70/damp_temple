@@ -11,6 +11,7 @@ var popup = _("#popup");
 var imgdataa = _("#datval");
 var control =_("#controls");
 var ctx = canvas.getContext("2d");
+var hh = control.offsetHeight;
 resize();
 reset.addEventListener("click",function(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -32,7 +33,7 @@ ctx.beginPath();
 canvas.addEventListener("mousedown",function(event){
 isDrawing = true;
 ctx.beginPath();
-ctx.moveTo(event.clientX,event.clientY);
+ctx.moveTo(event.clientX,event.clientY-hh);
 
 });
 canvas.addEventListener("touchmove",function(event){
@@ -44,21 +45,22 @@ canvas.addEventListener("touchmove",function(event){
   ctx.lineCap ="round";
   ctx.strokeStyle=color.value;
 
-  ctx.lineTo(event.touches[0].clientX,event.touches[0].clientY);
+  ctx.lineTo(event.touches[0].clientX,event.touches[0].clientY-hh);
   ctx.stroke();
   ctx.beginPath();
-  ctx.moveTo(event.touches[0].clientX,event.touches[0].clientY);
+  ctx.moveTo(event.touches[0].clientX,event.touches[0].clientY-hh);
 
 });
 canvas.addEventListener("mousemove",function(event){
+
   if(isDrawing==false){
     return;
   }
   ctx.lineWidth = size.value;
   ctx.lineCap ="round";
   ctx.strokeStyle=color.value;
-
-  ctx.lineTo(event.clientX,event.clientY);
+  
+  ctx.lineTo(event.clientX,event.clientY-hh);
   ctx.stroke();
 
 });
