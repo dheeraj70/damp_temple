@@ -1,6 +1,8 @@
 # Draw App: Online Drawing App
 
 ![Draw n' Upload Demo](drawApp_t.png)
+<p align="center">
+  <img src="drawApp_t.png" width="750px" height="300px"/></p>
 
 Welcome to Draw App, an interactive online drawing application that allows you to unleash your creativity and showcase your art skills! With this app, you can create beautiful drawings using the HTML5 canvas and JavaScript, and instantly upload your masterpieces to a MongoDB database to share them with the world.
 
